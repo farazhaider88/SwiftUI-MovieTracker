@@ -10,7 +10,7 @@
 		D00939572496621800386F16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00939562496621800386F16 /* AppDelegate.swift */; };
 		D00939592496621800386F16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00939582496621800386F16 /* SceneDelegate.swift */; };
 		D009395C2496621800386F16 /* MovieTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D009395A2496621800386F16 /* MovieTracker.xcdatamodeld */; };
-		D009395E2496621800386F16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009395D2496621800386F16 /* ContentView.swift */; };
+		D009395E2496621800386F16 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009395D2496621800386F16 /* MovieDetail.swift */; };
 		D00939602496621900386F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D009395F2496621900386F16 /* Assets.xcassets */; };
 		D00939632496621900386F16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00939622496621900386F16 /* Preview Assets.xcassets */; };
 		D00939662496621900386F16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00939642496621900386F16 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		D00939562496621800386F16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D00939582496621800386F16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D009395B2496621800386F16 /* MovieTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieTracker.xcdatamodel; sourceTree = "<group>"; };
-		D009395D2496621800386F16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D009395D2496621800386F16 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		D009395F2496621900386F16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00939622496621900386F16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D00939652496621900386F16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				D00939562496621800386F16 /* AppDelegate.swift */,
 				D00939582496621800386F16 /* SceneDelegate.swift */,
-				D009395D2496621800386F16 /* ContentView.swift */,
+				D009395D2496621800386F16 /* MovieDetail.swift */,
 				D009395F2496621900386F16 /* Assets.xcassets */,
 				D00939642496621900386F16 /* LaunchScreen.storyboard */,
 				D00939672496621900386F16 /* Info.plist */,
@@ -151,7 +151,7 @@
 			files = (
 				D009395C2496621800386F16 /* MovieTracker.xcdatamodeld in Sources */,
 				D00939572496621800386F16 /* AppDelegate.swift in Sources */,
-				D009395E2496621800386F16 /* ContentView.swift in Sources */,
+				D009395E2496621800386F16 /* MovieDetail.swift in Sources */,
 				D00939592496621800386F16 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MovieDetail.swift
 //  MovieTracker
 //
 //  Created by Faraz Haider on 14/06/2020.
