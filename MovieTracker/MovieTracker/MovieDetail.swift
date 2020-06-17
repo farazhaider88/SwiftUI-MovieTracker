@@ -13,6 +13,7 @@ struct MovieDetail: View {
     @State var movie:Movie
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var movieStore : MovieStore
+    var newMovie : Bool
     
     var body: some View {
         List {
@@ -48,25 +49,28 @@ struct MovieDetail: View {
                 }
             }
             
-            Section{
-                HStack{
-                   Spacer()
-                    Button(action: {
-                        self.movieStore.addMovie(movie: self.movie)
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text("Save")
+            if newMovie{
+                Section{
+                    HStack{
+                       Spacer()
+                        Button(action: {
+                            self.movieStore.addMovie(movie: self.movie)
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Text("Save")
+                        }
+                        Spacer()
                     }
-                    Spacer()
                 }
             }
+            
         }.listStyle(GroupedListStyle())
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetail(movie: Movie(),movieStore: MovieStore())
+        MovieDetail(movie: Movie(),movieStore: MovieStore(), newMovie: true)
     }
 }
 
