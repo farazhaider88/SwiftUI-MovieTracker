@@ -10,16 +10,16 @@ import SwiftUI
 
 struct MovieDetail: View {
     
-    @State var title = ""
-    @State var rating = 3.0
-    @State var seen = false
+    @State var movie:Movie
+    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var movieStore : MovieStore
     
     var body: some View {
         List {
             Section{
                 VStack(alignment: .leading){
                     ControlTitle(title: "Title")
-                    TextField("", text:$title)
+                    TextField("", text:$movie.title)
                 }
             }
             Section{
@@ -27,20 +27,20 @@ struct MovieDetail: View {
                     ControlTitle(title: "Rating")
                     HStack {
                         Spacer()
-                        Text(String(repeating: "★", count: Int(rating))).font(.title).foregroundColor(.yellow)
+                        Text(String(repeating: "★", count: Int(movie.rating))).font(.title).foregroundColor(.yellow)
                         Spacer()
                     }
-                    Slider(value: $rating, in: 1...5, step: 0.5)
+                    Slider(value: $movie.rating, in: 1...5, step: 0.5)
                 }
             }
             Section{
                 VStack(alignment: .leading){
                     ControlTitle(title: "Watched")
-                    Toggle(isOn: $seen) {
-                        if title == ""{
+                    Toggle(isOn: $movie.seen) {
+                        if movie.title == ""{
                             Text("I have seen this movie")
                         }else{
-                            Text("I have seen \(title)")
+                            Text("I have seen \(movie.title)")
                         }
                         
                     }
@@ -52,7 +52,8 @@ struct MovieDetail: View {
                 HStack{
                    Spacer()
                     Button(action: {
-                        
+                        self.movieStore.addMovie(movie: self.movie)
+                        self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("Save")
                     }
@@ -65,7 +66,7 @@ struct MovieDetail: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetail()
+        MovieDetail(movie: Movie(),movieStore: MovieStore())
     }
 }
 
