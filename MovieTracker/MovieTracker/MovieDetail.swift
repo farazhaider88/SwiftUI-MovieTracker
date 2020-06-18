@@ -28,7 +28,7 @@ struct MovieDetail: View {
                     ControlTitle(title: "Rating")
                     HStack {
                         Spacer()
-                        Text(String(repeating: "★", count: Int(movie.rating))).font(.title).foregroundColor(.yellow)
+                        Text(String(repeating: "★", count: Int(movie.rating))).font(.title).foregroundColor(.yellow).accessibility(label: Text("\(Int(movie.rating)) star rating"))
                         Spacer()
                     }
                     Slider(value: $movie.rating, in: 1...5, step: 0.5)
